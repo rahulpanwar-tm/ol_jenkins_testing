@@ -10,7 +10,7 @@
 ################################################################
  
 export PATH=/bin:/usr/bin:/usr/local/bin
-TODAY=`date +"%d%b%Y"`
+TODAY=`date +"%d_%m_%Y_%H_%M_%S"`
  
 ################################################################
 ################## Update below values  ########################
@@ -32,7 +32,7 @@ if [ "$RESULT" == "$DATABASE_NAME" ]; then
 
 
 ###########################################################
- 
+rm -rf ${DB_BACKUP_PATH}/${TODAY}
 mkdir -p ${DB_BACKUP_PATH}/${TODAY}
 echo "Backup started for database - ${DATABASE_NAME}"
  
@@ -53,7 +53,7 @@ fi
  
 ##### Remove backups older than {BACKUP_RETAIN_DAYS} days  #####
  
-DBDELDATE=`date +"%d%b%Y" --date="${BACKUP_RETAIN_DAYS} days ago"`
+DBDELDATE=`date +"%d_%m_%Y_%H_%M_%S" --date="${BACKUP_RETAIN_DAYS} days ago"`
  
 if [ ! -z ${DB_BACKUP_PATH} ]; then
       cd ${DB_BACKUP_PATH}
