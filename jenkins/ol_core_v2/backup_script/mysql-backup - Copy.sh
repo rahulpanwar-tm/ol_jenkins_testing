@@ -15,12 +15,12 @@ TODAY=`date +"%d_%m_%Y_%H_%M_%S"`
 ################################################################
 ################## Update below values  ########################
  
-DB_BACKUP_PATH=$1
-MYSQL_HOST=$2
-MYSQL_PORT=$3
-MYSQL_USER=$4
-MYSQL_PASSWORD=$5
-DATABASE_NAME=$6
+DB_BACKUP_PATH='/home/ttpl/jenkins_backup_script/'
+MYSQL_HOST='192.168.1.34'
+MYSQL_PORT='3306'
+MYSQL_USER='root'
+MYSQL_PASSWORD='Ttpl@123'
+DATABASE_NAME='rp'
 BACKUP_RETAIN_DAYS=30   ## Number of days to keep local backup copy
 
 ######################Checking database exist or not ##########################
