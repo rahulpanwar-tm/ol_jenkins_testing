@@ -1,7 +1,7 @@
 cd /home/ttpl/jenkins_backup_script/
 VAR=$(ls -tr|tail -1)
 ## declare an array variable
-declare -a arr=("rp" "rp_tp")
+declare -a arr=("$1" "$2")
 
 ## now loop through the above array
 for i in "${arr[@]}"

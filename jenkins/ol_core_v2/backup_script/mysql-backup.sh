@@ -21,7 +21,7 @@ MYSQL_USER=$4
 MYSQL_PASSWORD=$5
 #DATABASE_NAME=$6
 BACKUP_RETAIN_DAYS=30   ## Number of days to keep local backup copy
-declare -a arr=("rp" "rp_tp")
+declare -a arr=("$6" "$7")
 rm -rf ${DB_BACKUP_PATH}/${TODAY}
 mkdir -p ${DB_BACKUP_PATH}/${TODAY}
 
