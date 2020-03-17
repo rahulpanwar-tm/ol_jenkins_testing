@@ -40,8 +40,8 @@ if [ "$RESULT" == "$DATABASE_NAME" ]; then
 
 
 ###########################################################
-rm -rf ${DB_BACKUP_PATH}/${TODAY}
-mkdir -p ${DB_BACKUP_PATH}/${TODAY}
+#rm -rf ${DB_BACKUP_PATH}/${TODAY}
+#mkdir -p ${DB_BACKUP_PATH}/${TODAY}
 echo "Backup started for database - ${DATABASE_NAME}"
  
  
